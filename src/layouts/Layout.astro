@@ -1,0 +1,122 @@
+---
+import "../styles/global.css";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<div class="gradientHeader">
+			
+			<img class="Glogo" src="/images/Brand.png" alt="AsMediaIcon">
+			<img class="OpMenu" src="/Icons/Nav/OpenMenu.svg" alt="abrirMenu">
+			
+		</div>
+		<div id="PanelMenu" class="panel">
+			<div class="header-panel">
+				<img class="logitoPanel" src="/images/Brand.png" alt="logito">
+				<img class="close" src="/Icons/Nav/CloseMenu.svg" alt="close">
+			</div>
+			<ul class="interes-sect">
+				<li>Acerca De</li>
+				<li>Admisión 2025</li>
+			</ul>
+			<ul class="carreras-sect">
+				<li>Televisión</li>
+				<li>Diseño</li>
+				<li>imagen</li>
+			</ul>
+			<ul class="contacto-sect">
+				<li>contacto</li>
+			</ul>
+		</div>
+		<slot />
+	</body>
+</html>
+
+<style>
+	*{
+		margin: 0;
+		padding:0;
+		box-sizing: border-box;
+	}
+	html,body {
+		line-height: 1.2;
+
+	}
+	.Glogo{
+		width: 36px;
+		height: 34.91px;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	.OpMenu{
+		position: absolute;
+		top: 20px;
+		right: 15px;
+	}
+	.gradientHeader{
+		background: linear-gradient(black,transparent );
+		height: 64px;
+		position: relative;
+
+	}
+	.panel{
+		color: #e2f9d2;
+		font-weight: 200;
+		font-size: 16px;
+		background-color: #1a1a1a;
+		width: 260px;
+		height: 558px;
+		padding: 10px;
+		border-radius: 12px;
+		margin: auto;
+	}
+	.interes-sect{
+		border-color:rgba(255, 255, 255, 0.102);
+		border-width: .5px;
+		border-left: none;
+		border-right: none;
+		line-height: 26px;
+		padding:20px;
+	}
+	.carreras-sect{
+		border-color:rgba(255, 255, 255, 0.102);
+		border-width: .5px;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		padding:20px;
+		line-height: 26px;
+	}
+	.contacto-sect{
+		border-color:rgba(255, 255, 255, 0.102);
+		border-width: .5px;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		padding:20px;
+		line-height: 26px;
+	}
+	.logitoPanel{
+		width: 36px;
+		height: 34.91px;
+	}
+	.close{
+		position: relative;
+		left: 220px;
+		top: -28px;
+	}
+	
+</style>
