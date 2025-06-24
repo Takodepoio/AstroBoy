@@ -18,10 +18,42 @@ import Layout from '../layouts/Layout.astro';
 		<button class="button-visit">Agenda Una Visita</button>
 	</div>
 	
+	<div class="carreras">
+		<h2 class="title_home subtitle">Licenciaturas</h2>
+
+		<div class="TV">
+			<div class="TV-data">
+				<p class="h3 TV-title">Televisión y Producción Audiovisual<p>
+				<p>Aprende a contar historias a través del audio y video.</p>
+				<button class="buttonC TV-Button">Ver Más</button>
+			</div>
+		</div>
+
+		<div class="DP">
+			<div class="DP-data">
+				<p class="h3 DP-title">Diseño y Producción Multimedia</p>
+				<p>Aprende a crear experiencias digitales que cautiven.</p>
+				<button class="buttonC DP-Button">Ver Más</button>
+			</div>
+		</div>
+
+		<div class="CI">
+			<div class="CI-data">
+				<p class="h3 CI-title">Consultoría y Gestión de Imagen</p>
+				<p>Aprende a construir una imágen que impacte</p>
+				<button class="buttonC CI-Button">Ver Más</button>
+			</div>
+		</div>
+	</div>
 	
 </Layout>
 
 <style>
+	*{
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
 	body{
 	background-color: #111111;
 	}
@@ -87,6 +119,112 @@ import Layout from '../layouts/Layout.astro';
 		color: #1da343;
 		padding: 12px;
 		border-radius: 8px;
+	}
+	.carreras{
+		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+  		gap: 24px;
+		position: relative;
+		top: 280px;
+	}
+	.TV{
+		background-color: #1a91b2 ;
+		width: 300px;
+		height: 480px;
+		border-radius: 24px;
+		padding: 24px;
+	}
+	.DP{
+		background-color: #541ab2 ;
+		width: 300px;
+		height: 480px;
+		border-radius: 24px;
+		padding: 24px;
+	}
+	.CI{
+		background-color: #84187d;
+		width: 300px;
+		height: 480px;
+		border-radius: 24px;
+		padding: 24px;
+	}
+	.subtitle{
+		top: -15px;
+		color: #A9EC79;
+	}
+	.h3{
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 25px;
+		text-align: center;
+		padding:15px ;
+		
+	}
+	p{
+		text-align: center;
+		font-size: 16px;
+		line-height: 20px;
+		color: whitesmoke;
+	}
+	.TV-data{
+		position: relative;
+		top: 225px;
+		text-align: center;
+	}
+	.DP-data{
+		position: relative;
+		top: 225px;
+		text-align: center;
+
+	}
+	.CI-data{
+		position: relative;
+		top: 225px;
+		text-align: center;
+
+	}	
+	.buttonC{
+		background-color: aliceblue;
+		width: 101px;
+		height: 43px;
+		border-radius: 8px;
+		padding: 18px, 16px;
+		position: relative;
+		top: 15px;
+		transition: .3s ease;
+		color: whitesmoke;
+	}
+	.TV-title{
+		color: #a6e2f2;
+	}
+	.DP-title{
+		color: #c3a6f2;
+	}
+	.CI-title{
+		color: #f7c7e7;
+	}
+
+	.TV-Button{
+		background-color: #0d4959;
+	}
+	.DP-Button{
+		background-color: #2a0d59;
+	}
+	.CI-Button{
+		background-color: #5a0c3f;
+	}
+	.TV-Button:hover{
+		background-color: #e9f8fc;
+		color: #0d4959;
+	}
+	.DP-Button:hover{
+		background-color: #fce9fc;
+		color: #2a0d59;
+	}
+	.CI-Button:hover{
+		background-color: #fce8f5;
+		color: #5a0c3f;
 	}
 
 </style>
