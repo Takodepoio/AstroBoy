@@ -46,6 +46,7 @@ import "../styles/global.css";
 				<li class="contact-p">contacto</li>
 			</ul>
 		</div>
+		<slot name="above"/>
 		<slot />
 	</body>
 </html>
@@ -74,9 +75,10 @@ import "../styles/global.css";
 		right: 15px;
 	}
 	.gradientHeader{
-		background: linear-gradient(black,transparent );
+		background: linear-gradient(to bottom black,transparent );
 		height: 64px;
 		position: relative;
+		z-index: 5;
 
 	}
 	.panel{
@@ -169,6 +171,7 @@ import "../styles/global.css";
 	.panel.abierto {
  		transform: translateX(0);
 	}
+
 
 </style>
 <script type="module">

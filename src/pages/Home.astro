@@ -8,40 +8,55 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="home">
-	<div class="title_home">
-		<h2>Estudia con nosotros</h2>
-		<h1>Producción Audiovisual</h1>
-		<p class="textilloT">En As Media, entendemos que el éxito comienza con una formación de calidad.</p>
-	</div>
-	<div class="botones">
-		<button class="button-discover">Descubre Tu Futuro</button>
-		<button class="button-visit">Agenda Una Visita</button>
+	<div class="video-BG-container">
+		<video autoplay muted loop playsinline class="video-bg">
+			<source src="/images/MASTER - Hero.mp4" type="video/mp4">
+		</video>
+		<div class="video-mask"></div>
+
+		<div class="video-content">
+			<div class="title_home">
+				<h2>Estudia con nosotros</h2>
+				<h1>Producción Audiovisual</h1>
+				<p class="textilloT">En As Media, entendemos que el éxito comienza con una formación de calidad.</p>
+			</div>
+			<div class="botones">
+				<button class="button-discover">Descubre Tu Futuro</button>
+				<button class="button-visit">Agenda Una Visita</button>
+			</div>
+		</div>
 	</div>
 	
 	<div class="carreras">
 		<h2 class="title_home subtitle">Licenciaturas</h2>
 
 		<div class="TV">
+			<div class="TV-Gradient">
 			<div class="TV-data">
 				<p class="h3 TV-title">Televisión y Producción Audiovisual<p>
 				<p>Aprende a contar historias a través del audio y video.</p>
 				<button class="buttonC TV-Button">Ver Más</button>
 			</div>
+			</div>
 		</div>
 
 		<div class="DP">
+			<div class="DP-Gradient">
 			<div class="DP-data">
 				<p class="h3 DP-title">Diseño y Producción Multimedia</p>
 				<p>Aprende a crear experiencias digitales que cautiven.</p>
 				<button class="buttonC DP-Button">Ver Más</button>
 			</div>
+			</div>
 		</div>
 
 		<div class="CI">
-			<div class="CI-data">
-				<p class="h3 CI-title">Consultoría y Gestión de Imagen</p>
-				<p>Aprende a construir una imágen que impacte</p>
-				<button class="buttonC CI-Button">Ver Más</button>
+			<div class="CI-Gradient">
+				<div class="CI-data">
+					<p class="h3 CI-title">Consultoría y Gestión de Imagen</p>
+					<p>Aprende a construir una imágen que impacte</p>
+					<button class="buttonC CI-Button">Ver Más</button>
+			    </div>
 			</div>
 		</div>
 	</div>
@@ -86,64 +101,43 @@ import Layout from '../layouts/Layout.astro';
 		position: relative;
 		top: 110px;
 	}
-	.button-discover{
-		font-size: 16px;
-		font-weight: 500;
-		background-color: #1da343;
-		padding: 12px;
-		border-radius: 8px;
-		margin-bottom: 5px;
-		transition: background-color 0.3s ease, color 0.3s ease;
-	}
-	.button-visit{
-		font-size: 16px;
-		font-weight: 500;
-		background-color: #444444;
-		padding: 12px;
-		border-radius: 8px;
-		transition: background-color 0.3s ease, color 0.3s ease;
-	}
-	.button-discover:hover{
-		font-size: 16px;
-		font-weight: 500;
-		background-color: #e2f9d2;
-		color: #1da343;
-		padding: 12px;
-		border-radius: 8px;
-		margin-bottom: 5px;
-	}
-	.button-visit:hover{
-		font-size: 16px;
-		font-weight: 500;
-		background-color: #e2f9d2;
-		color: #1da343;
-		padding: 12px;
-		border-radius: 8px;
-	}
+	
 	.carreras{
 		display: flex;
   		flex-direction: column;
   		align-items: center;
   		gap: 24px;
 		position: relative;
-		top: 280px;
+		top: 560px;
 	}
 	.TV{
+		position: relative;
 		background-color: #1a91b2 ;
+		background-image: url('/images/TVstudent.png');
+		background-size: cover;
+		background-position: center;
 		width: 300px;
 		height: 480px;
 		border-radius: 24px;
 		padding: 24px;
 	}
 	.DP{
+		position: relative;
 		background-color: #541ab2 ;
+		background-image: url('/images/Sam.png');
+		background-size: cover;
+		background-position: center;
 		width: 300px;
 		height: 480px;
 		border-radius: 24px;
 		padding: 24px;
 	}
 	.CI{
+		position: relative;
 		background-color: #84187d;
+		background-image: url('/images/Majo.png');
+		background-size: cover;
+		background-position: center;
 		width: 300px;
 		height: 480px;
 		border-radius: 24px;
@@ -168,17 +162,20 @@ import Layout from '../layouts/Layout.astro';
 		color: whitesmoke;
 	}
 	.TV-data{
+		padding: 20px;
 		position: relative;
 		top: 225px;
 		text-align: center;
 	}
 	.DP-data{
+		padding: 20px;
 		position: relative;
 		top: 225px;
 		text-align: center;
 
 	}
 	.CI-data{
+		padding: 20px;
 		position: relative;
 		top: 225px;
 		text-align: center;
@@ -226,5 +223,113 @@ import Layout from '../layouts/Layout.astro';
 		background-color: #fce8f5;
 		color: #5a0c3f;
 	}
+	.CI-Gradient {
+ 		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		background: linear-gradient(to top, #2e011e 0%, transparent 100%);
+  		border-radius: 24px;
+  		z-index: 1;
+	}	
+	.DP-Gradient{
+		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		background: linear-gradient(to top, #21002d 0%, transparent 100%);
+  		border-radius: 24px;
+  		z-index: 1;
+	}
+	.TV-Gradient{
+		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		background: linear-gradient(to top, #00283b 0%, transparent 100%);
+  		border-radius: 24px;
+  		z-index: 1;
+	}
+	.video-BG-container{
+		position: absolute;
+		z-index: 0;
+		top: -64px;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		max-height: 568px;
+		overflow: hidden;
+		background-color: black;
+		pointer-events: none;
+	}
+	.video-bg{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+	.video-mask{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 568px;
+		background: linear-gradient(to bottom, transparent 60%,#111111);
+		z-index: 1;
+		pointer-events: none;
+	}
+	.video-content{
+		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+  		gap: 24px;
+		position: relative;
+		top: 50px;
+		z-index: 1;
+
+	}
+	.button-discover{
+		font-size: 16px;
+		font-weight: 500;
+		background-color: #1da343;
+		padding: 12px;
+		border-radius: 8px;
+		margin-bottom: 5px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+	.button-visit{
+		font-size: 16px;
+		font-weight: 500;
+		background-color: #444444;
+		padding: 12px;
+		border-radius: 8px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+	.button-discover:hover{
+		font-size: 16px;
+		font-weight: 500;
+		background-color: #e2f9d2;
+		color: #1da343;
+		padding: 12px;
+		border-radius: 8px;
+		margin-bottom: 5px;
+	}
+	.button-visit:hover{
+		font-size: 16px;
+		font-weight: 500;
+		background-color: #e2f9d2;
+		color: #1da343;
+		padding: 12px;
+		border-radius: 8px;
+	}
+
+
 
 </style>
